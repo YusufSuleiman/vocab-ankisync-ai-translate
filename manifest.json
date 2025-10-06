@@ -1,0 +1,11 @@
+{
+	"id": "vocab-ankisync-ai-translate",
+	"name": "Vocab AnkiSync AI Translate",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Advanced AI-powered vocabulary processor with Anki integration. Automatically translate, define, and sync words using Groq AI models.",
+	"author": "Yusuf Suleiman",
+	"authorUrl": "https://github.com/YusufSuleiman",
+	"fundingUrl": "https://paypal.me/YusufSuleiman004",
+	"isDesktopOnly": false
+}

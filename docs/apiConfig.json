@@ -1,0 +1,61 @@
+{
+  "last_updated": "2025-10-05T19:00:00Z",
+  "update_info": {
+    "version": "1.0.0",
+    "message": "Enhanced configuration with TPM limits",
+    "download_url": "",
+    "critical": false
+  },
+  "endpoints": {
+    "primary": "https://vocab-translation-service2.yosef200122.workers.dev/",
+    "backups": ["https://vocab-translation-service.baron-legate9.workers.dev/"]
+  },
+  "supported_languages": [
+    {"code": "en", "name": "English", "nativeName": "English", "rtl": false, "flag": "🇬🇧"},
+    {"code": "ar", "name": "Arabic", "nativeName": "العربية", "rtl": true, "flag": "🇸🇦"},
+    {"code": "fr", "name": "French", "nativeName": "Français", "rtl": false, "flag": "🇫🇷"},
+    {"code": "es", "name": "Spanish", "nativeName": "Español", "rtl": false, "flag": "🇪🇸"},
+    {"code": "de", "name": "German", "nativeName": "Deutsch", "rtl": false, "flag": "🇩🇪"},
+    {"code": "it", "name": "Italian", "nativeName": "Italiano", "rtl": false, "flag": "🇮🇹"},
+    {"code": "pt", "name": "Portuguese", "nativeName": "Português", "rtl": false, "flag": "🇵🇹"},
+    {"code": "ru", "name": "Russian", "nativeName": "Русский", "rtl": false, "flag": "🇷🇺"},
+    {"code": "nl", "name": "Dutch", "nativeName": "Nederlands", "rtl": false, "flag": "🇳🇱"},
+    {"code": "pl", "name": "Polish", "nativeName": "Polski", "rtl": false, "flag": "🇵🇱"},
+    {"code": "zh", "name": "Chinese", "nativeName": "中文", "rtl": false, "flag": "🇨🇳"},
+    {"code": "ja", "name": "Japanese", "nativeName": "日本語", "rtl": false, "flag": "🇯🇵"},
+    {"code": "ko", "name": "Korean", "nativeName": "한국어", "rtl": false, "flag": "🇰🇷"},
+    {"code": "hi", "name": "Hindi", "nativeName": "हिन्दी", "rtl": false, "flag": "🇮🇳"},
+    {"code": "he", "name": "Hebrew", "nativeName": "עברית", "rtl": true, "flag": "ℵ"},
+    {"code": "fa", "name": "Persian", "nativeName": "فارسی", "rtl": true, "flag": "🇮🇷"},
+    {"code": "tr", "name": "Turkish", "nativeName": "Türkçe", "rtl": false, "flag": "🇹🇷"},
+    {"code": "la", "name": "Latin", "nativeName": "Latina", "rtl": false, "flag": "🇻🇦"}
+  ],
+  "models": {
+    "options": {
+      "openai/gpt-oss-120b": "🤖 GPT-OSS — High translation accuracy",
+      "llama-3.3-70b-versatile": "🦙 LLaMA 3.3 — Precise and contextual translations",
+      "qwen/qwen3-32b": "🐉 Qwen 3 — Strong multilingual translation",
+      "gemma2-9b-it": "💎 Gemma 2 — Balanced and fast translation",
+      "meta-llama/llama-4-scout-17b-16e-instruct": "🚀 LLaMA 4 Scout — Smart and refined translation",
+      "moonshotai/kimi-k2-instruct-0905": "🌙 Kimi K2 — Excellent language understanding"
+    },
+    "highLimit": [
+      "qwen/qwen3-32b",
+      "moonshotai/kimi-k2-instruct-0905"
+    ],
+    "consensus_models": [
+      "llama-3.3-70b-versatile",
+      "qwen/qwen3-32b",
+      "moonshotai/kimi-k2-instruct-0905",
+      "meta-llama/llama-4-scout-17b-16e-instruct"
+    ],
+    "tpm_limits": {
+      "openai/gpt-oss-120b": 3000,
+      "llama-3.3-70b-versatile": 3000,
+      "qwen/qwen3-32b": 6000,
+      "gemma2-9b-it": 10000,
+      "meta-llama/llama-4-scout-17b-16e-instruct": 8000,
+      "moonshotai/kimi-k2-instruct-0905": 6000
+    }
+  }
+}
